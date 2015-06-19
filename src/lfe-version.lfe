@@ -4,7 +4,7 @@
           (do 1)
           (format_error 1)))
 
-(defun provider-name () 'version)
+(defun provider-name () 'lfe-version)
 (defun short-desc () "The LFE rebar3 version plugin.")
 (defun deps ()
   '(#(default compile)
