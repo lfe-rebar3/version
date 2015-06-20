@@ -1,4 +1,4 @@
-(defmodule version
+(defmodule lfe-version
   (behaviour provider)
   (export (init 1)
           (do 1)
