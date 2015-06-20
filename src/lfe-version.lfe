@@ -1,8 +1,9 @@
 (defmodule lfe-version
   (behaviour provider)
-  (export (init 1)
-          (do 1)
-          (format_error 1)))
+  ;; (export (init 1)
+  ;;         (do 1)
+  ;;         (format_error 1)))
+  (export all))
 
 (defun provider-name () 'version)
 (defun short-desc () "The LFE rebar3 version plugin.")
@@ -25,8 +26,9 @@
                  #(short ,(short-desc))          ;
                  #(desc ,(info (short-desc)))    ;
                  #(opts '())))                   ; list of options understood by the plugin
-         (provider (providers:create opts)))
-    `#(ok ,(rebar_state:add_provider state provider))))
+         (provider (providers:create opts))
+         (new-state (rebar_state:add_provider state provider)))
+    `#(ok ,new-state)))
 
 (defun do (state)
   `#(,(lutil:get-versions) ,state))
@@ -39,8 +41,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun info (desc)
-  (io_lib:format "~n~s~n"
-                 "~n"
-                 "Enter your help text for your version plugin here.~n"
-                 "~n"
-                 `(,desc)))
+  (io_lib:format
+    (++ "~n~s~n~n"
+        "Enter your help text for your version plugin here.~n"
+        "~n")
+    `(,desc)))
