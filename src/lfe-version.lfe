@@ -1,8 +1,5 @@
 (defmodule lfe-version
   (behaviour provider)
-  ;; (export (init 1)
-  ;;         (do 1)
-  ;;         (format_error 1)))
   (export all))
 
 (defun provider-name () 'version)
@@ -20,15 +17,15 @@
   (let* ((opts `(#(name ,(provider-name))        ; The 'user friendly' name of the task
                  #(module ,(MODULE))             ; The module implementation of the task
                  #(namespace lfe)                ; All LFE plugins need to have this ns
-                 #(bare true)                    ; The task can be run by the user, always true
+                 #(opts ())                      ; list of options understood by the plugin
                  #(deps ,(deps))                 ; The list of dependencies
                  #(example "rebar3 lfe version") ; How to use the plugin
-                 #(short_desc ,(short-desc))     ;
-                 #(desc ,(info (short-desc)))    ;
-                 #(opts '())))                   ; list of options understood by the plugin
+                 #(short_desc ,(short-desc))     ; A one-line description of the plugin
+                 #(desc ,(info (short-desc)))    ; A longer description of the plugin
+                 #(bare true)))                  ; The task can be run by the user, always true
          (provider (providers:create opts))
-         (new-state (rebar_state:add_provider state provider)))
-    `#(ok ,new-state)))
+         (updated-state (rebar_state:add_provider state provider)))
+    `#(ok ,updated-state)))
 
 (defun do (state)
   `#(,(lutil:get-versions) ,state))
