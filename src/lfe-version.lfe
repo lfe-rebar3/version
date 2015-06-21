@@ -41,6 +41,7 @@
 (defun info (desc)
   (io_lib:format
     (++ "~n~s~n~n"
-        "Enter your help text for your version plugin here.~n"
+        "Display the version info for LFE as well as major components "
+        "of Erlang/OTP.~n"
         "~n")
     `(,desc)))
