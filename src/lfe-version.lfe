@@ -23,7 +23,7 @@
                  #(bare true)                    ; The task can be run by the user, always true
                  #(deps ,(deps))                 ; The list of dependencies
                  #(example "rebar3 lfe version") ; How to use the plugin
-                 #(short ,(short-desc))          ;
+                 #(short_desc ,(short-desc))     ;
                  #(desc ,(info (short-desc)))    ;
                  #(opts '())))                   ; list of options understood by the plugin
          (provider (providers:create opts))
