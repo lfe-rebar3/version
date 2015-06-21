@@ -29,7 +29,7 @@
 
 (defun do (state)
   ;;`#(,(lutil:get-versions) ,state))
-  (tuple 'ok state))
+  (tuple 1 state))
 
 (defun format_error (reason)
   (io_lib:format "~p" `(,reason)))
