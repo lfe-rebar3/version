@@ -28,8 +28,8 @@
     `#(ok ,updated-state)))
 
 (defun do (state)
-  ;;`#(,(lutil:get-versions) ,state))
-  (tuple 1 state))
+  (lfe_io:format "~p" `(,(lutil:get-versions)))
+  `#(ok ,state))
 
 (defun format_error (reason)
   (io_lib:format "~p" `(,reason)))
