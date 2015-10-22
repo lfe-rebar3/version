@@ -24,12 +24,12 @@
                  #(short_desc ,(short-desc))     ; A one-line description
                  #(desc ,(info (short-desc)))    ; A longer description
                  #(bare true)))                  ; The task can be run by user
-         (rebar_api:add_deps_to_path state)
          (provider (providers:create opts))
          (updated-state (rebar_state:add_provider state provider)))
     `#(ok ,updated-state)))
 
 (defun do (state)
+  (rebar_api:add_deps_to_path state)
   (lfe_io:format "~p" `(,(lutil:get-versions)))
   `#(ok ,state))
 
