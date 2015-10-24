@@ -20,7 +20,7 @@ Add the plugin to your ``rebar.config``:
 ```erlang
 {plugins, [
   {'lfe-version', ".*",
-    {git, "https://github.com/lfex/rebar3-lfe-version.git",
+    {git, "https://github.com/lfe-rebar3/version.git",
       {branch, "master"}}}
 ]}.
 ```
