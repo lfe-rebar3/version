@@ -18,9 +18,10 @@
   (get-app-version 'rebar))
 
 (defun get-versions ()
-  `(#(erlang ,(erlang:system_info 'otp_release))
-    #(emulator ,(erlang:system_info 'version))
-    #(driver-version ,(erlang:system_info 'driver_version))
-    #(lfe ,(get-lfe-version))
-    #(rebar ,(application:get_key 'rebar 'vsn))))
+  (let ((`#(ok ,rebar-version) (application:get_key 'rebar 'vsn)))
+    `(#(erlang ,(erlang:system_info 'otp_release))
+      #(emulator ,(erlang:system_info 'version))
+      #(driver-version ,(erlang:system_info 'driver_version))
+      #(lfe ,(get-lfe-version))
+      #(rebar ,rebar-version))))
 
