@@ -24,13 +24,11 @@
                  #(short_desc ,(short-desc))     ; A one-line description
                  #(desc ,(info (short-desc)))    ; A longer description
                  #(bare true)))                  ; The task can be run by user
-         (provider (providers:create opts))
-         (updated-state (rebar_state:add_provider state provider)))
-    `#(ok ,updated-state)))
+         (provider (providers:create opts)))
+    `#(ok ,(rebar_state:add_provider state provider))))
 
 (defun do (state)
-  (rebar_api:add_deps_to_path state)
-  (lfe_io:format "~p" `(,(get-versions)))
+  (lfe_io:format "~p" `(,(lfe-version-util:get-versions)))
   `#(ok ,state))
 
 (defun format_error (reason)
@@ -47,27 +45,3 @@
         "of Erlang/OTP.~n"
         "~n")
     `(,desc)))
-
-(defun get-app-version
-  ((name) (when (is_atom name))
-    (get-app-src-version
-      (code:where_is_file (++ (atom_to_list name) ".app"))))
-  ((name) (error "App name must be an atom.")))
-
-(defun get-app-src-version (filename)
-  (let (((tuple 'ok (list app)) (file:consult filename)))
-    (proplists:get_value 'vsn (element 3 app))))
-
-(defun get-lfe-version ()
-  (get-app-version 'lfe))
-
-(defun get-version ()
-  (get-app-version 'lutil))
-
-(defun get-versions ()
-  `(#(erlang ,(erlang:system_info 'otp_release))
-    #(emulator ,(erlang:system_info 'version))
-    #(driver-version ,(erlang:system_info 'driver_version))
-    #(lfe ,(get-lfe-version))
-    #(lutil ,(get-version))))
-
