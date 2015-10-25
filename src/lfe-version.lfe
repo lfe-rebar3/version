@@ -6,9 +6,7 @@
 (defun provider-name () 'version)
 (defun short-desc () "The LFE rebar3 version plugin.")
 (defun deps ()
-  '(#(default compile)
-    #(default app_discovery)
-    #(lfe compile)))
+  '(#(default app_discovery)))
 
 ;;;>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 ;;; Public API
