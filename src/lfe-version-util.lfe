@@ -8,7 +8,7 @@
   ((name) (error "App name must be an atom.")))
 
 (defun get-app-src-version (filename)
-  (let ((`#(ok (,app)) ,(file:consult filename)))
+  (let ((`#(ok (,app)) (file:consult filename)))
     (proplists:get_value 'vsn (element 3 app))))
 
 (defun get-lfe-version ()
