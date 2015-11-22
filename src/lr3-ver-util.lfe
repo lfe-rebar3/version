@@ -1,4 +1,4 @@
-(defmodule lfe-version-util
+(defmodule lr3-ver-util
   (export all))
 
 (defun get-app-version

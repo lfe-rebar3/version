@@ -2,7 +2,7 @@
   (behaviour provider)
   (export all))
 
-(defun namespace () 'lfe)                   ; All LFE plugsin need to have this
+(defun namespace () 'lfe)
 (defun provider-name () 'version)
 (defun short-desc () "The LFE rebar3 version plugin.")
 (defun deps ()
@@ -26,7 +26,7 @@
     `#(ok ,(rebar_state:add_provider state provider))))
 
 (defun do (state)
-  (lfe_io:format "~p" `(,(lfe-version-util:get-versions)))
+  (lfe_io:format "~p" `(,(lr3-ver-util:get-versions)))
   `#(ok ,state))
 
 (defun format_error (reason)
