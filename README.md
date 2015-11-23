@@ -7,7 +7,7 @@
 [![][lr3-logo]][lr3-logo]
 
 
-#### Contents
+#### Contents [&#x219F;](#contents)
 
 * [Build](#build-)
 * [Use](#use-)
@@ -21,7 +21,7 @@ $ rebar3 compile
 ```
 
 
-## Use
+## Use [&#x219F;](#contents)
 
 Add the required plugins and provider hooks to your ``rebar.config``:
 
