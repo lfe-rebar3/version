@@ -2,7 +2,7 @@
 
 *The LFE rebar3 version plugin*
 
-[lr3-logo]: resources/images/logo.png
+[lr3-logo]: priv/images/logo.png
 
 [![][lr3-logo]][lr3-logo]
 
@@ -28,9 +28,9 @@ Add the required plugins and provider hooks to your ``rebar.config``:
 ```erlang
 {plugins, [
   {'lfe-compile', ".*",
-    {git, "https://github.com/lfe-rebar3/compile.git", {tag, "0.2.1"}}},
+    {git, "https://github.com/lfe-rebar3/compile.git", {tag, "0.4.0"}}},
   {'lfe-version', ".*",
-    {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.2.1"}}}
+    {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.3.1"}}}
 ]}.
 
 {provider_hooks, [
