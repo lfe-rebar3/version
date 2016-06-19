@@ -28,13 +28,13 @@ Add the required plugins and provider hooks to your ``rebar.config``:
 ```erlang
 {plugins, [
   {'lfe-compile', ".*",
-    {git, "https://github.com/lfe-rebar3/compile.git", {tag, "0.4.0"}}},
+    {git, "https://github.com/lfe-rebar3/compile.git", {tag, "0.5.0"}}},
   {'lfe-version', ".*",
-    {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.3.1"}}}
+    {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.4.0"}}}
 ]}.
 
 {provider_hooks, [
-   {pre, [{compile, {lfe, compile}}]}
+   {post, [{compile, {lfe, compile}}]}
   ]}.
 ```
 
@@ -56,6 +56,6 @@ $ rebar3 lfe version
 (#(erlang "18")
  #(emulator "7.0")
  #(driver-version "3.2")
- #(lfe "0.10.1")
- #(rebar "3.0.0-beta.4+build.182.refd2628b6"))
+ #(lfe "1.1.1")
+ #(rebar "3.1.1"))
 ```
