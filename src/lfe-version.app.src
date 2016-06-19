@@ -1,6 +1,6 @@
 {application, 'lfe-version',
  [{description, "The LFE rebar3 version plugin"},
-  {vsn, "0.3.2"},
+  {vsn, "0.4.0"},
   {registered, []},
   {applications,
    [kernel,
