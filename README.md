@@ -1,8 +1,8 @@
 # lfe-version
 
-*The LFE rebar3 version plugin*
+[![Build Status][travis badge]][travis] [![LFE Versions][lfe badge]][lfe] [![Erlang Versions][erlang badge]][versions] [![Tags][github tags badge]][github tags] [![Downloads][hex downloads]][hex package]
 
-[lr3-logo]: priv/images/logo.png
+*The LFE rebar3 version plugin*
 
 [![][lr3-logo]][lr3-logo]
 
@@ -28,7 +28,7 @@ Add the required plugins and provider hooks to your ``rebar.config``:
 ```erlang
 {plugins, [
   {'lfe-compile', ".*",
-    {git, "https://github.com/lfe-rebar3/compile.git", {tag, "0.5.0"}}},
+    {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.5.0"}}},
   {'lfe-version', ".*",
     {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.4.0"}}}
 ]}.
@@ -67,3 +67,26 @@ BSD 3-Clause License
 Copyright © 2015-2016, Duncan McGreggor <oubiwann@gmail.com>
 
 Copyright © 2016, Eric Bailey <eric@ericb.me>
+
+
+<!-- Named page links below: /-->
+
+[lr3-logo]: priv/images/logo.png
+[org]: https://github.com/lfe-rebar3
+[github]: https://github.com/lfe-rebar3/version
+[gitlab]: https://gitlab.com/lfe-rebar3/version
+[travis]: https://travis-ci.org/lfe-rebar3/version
+[travis badge]: https://img.shields.io/travis/lfe-rebar3/version.svg
+[lfe]: https://github.com/rvirding/lfe
+[lfe badge]: https://img.shields.io/badge/lfe-1.2.0-blue.svg
+[erlang badge]: https://img.shields.io/badge/erlang-R15%20to%2019.1-blue.svg
+[versions]: https://github.com/lfe-rebar3/version/blob/master/.travis.yml
+[github tags]: https://github.com/lfe-rebar3/version/tags
+[github tags badge]: https://img.shields.io/github/tag/lfe-rebar3/version.svg
+[github downloads]: https://img.shields.io/github/downloads/atom/atom/total.svg
+[hex badge]: https://img.shields.io/hexpm/v/rebar3_lfe_compile.svg?maxAge=2592000
+[hex package]: https://hex.pm/packages/rebar3_lfe_compile
+[hex downloads]: https://img.shields.io/hexpm/dt/rebar3_lfe_compile.svg
+[ltool]: https://github.com/lfe-rebar3/ltool
+[blog post]: http://blog.lfe.io/tutorials/2016/03/25/0858-lfe-and-rebar3/
+[lfetool]: https://github.com/lfex/lfetool 
