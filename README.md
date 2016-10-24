@@ -4,7 +4,7 @@
 
 *The LFE rebar3 version plugin*
 
-[![][lr3-logo]][lr3-logo]
+[![Org Logo][lr3-logo]][lr3-logo]
 
 
 #### Contents [&#x219F;](#contents)
