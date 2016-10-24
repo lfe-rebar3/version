@@ -84,9 +84,6 @@ Copyright © 2016, Eric Bailey <eric@ericb.me>
 [github tags]: https://github.com/lfe-rebar3/version/tags
 [github tags badge]: https://img.shields.io/github/tag/lfe-rebar3/version.svg
 [github downloads]: https://img.shields.io/github/downloads/atom/atom/total.svg
-[hex badge]: https://img.shields.io/hexpm/v/rebar3_lfe_compile.svg?maxAge=2592000
-[hex package]: https://hex.pm/packages/rebar3_lfe_compile
-[hex downloads]: https://img.shields.io/hexpm/dt/rebar3_lfe_compile.svg
-[ltool]: https://github.com/lfe-rebar3/ltool
-[blog post]: http://blog.lfe.io/tutorials/2016/03/25/0858-lfe-and-rebar3/
-[lfetool]: https://github.com/lfex/lfetool 
+[hex badge]: https://img.shields.io/hexpm/v/rebar3_lfe_version.svg?maxAge=2592000
+[hex package]: https://hex.pm/packages/rebar3_lfe_version
+[hex downloads]: https://img.shields.io/hexpm/dt/rebar3_lfe_version.svg
