@@ -59,3 +59,11 @@ $ rebar3 lfe version
  #(lfe "1.1.1")
  #(rebar "3.1.1"))
 ```
+
+## License [&#x219F;](#contents)
+
+BSD 3-Clause License
+
+Copyright © 2015-2016, Duncan McGreggor <oubiwann@gmail.com>
+
+Copyright © 2016, Eric Bailey <eric@ericb.me>
