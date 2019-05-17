@@ -28,9 +28,9 @@ Add the required plugins and provider hooks to your ``rebar.config``:
 ```erlang
 {plugins, [
   {'lfe-compile', ".*",
-    {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.5.0"}}},
+    {git, "https://github.com/lfe-rebar3/compile.git", {tag, "0.5.0"}}},
   {'lfe-version', ".*",
-    {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.4.0"}}}
+    {git, "https://github.com/lfe-rebar3/version.git", {tag, "0.6.0"}}}
 ]}.
 
 {provider_hooks, [
@@ -64,7 +64,7 @@ $ rebar3 lfe version
 
 BSD 3-Clause License
 
-Copyright © 2015-2016, Duncan McGreggor <oubiwann@gmail.com>
+Copyright © 2015-2019, Duncan McGreggor <oubiwann@gmail.com>
 
 Copyright © 2016, Eric Bailey <eric@ericb.me>
 
@@ -78,8 +78,8 @@ Copyright © 2016, Eric Bailey <eric@ericb.me>
 [travis]: https://travis-ci.org/lfe-rebar3/version
 [travis badge]: https://img.shields.io/travis/lfe-rebar3/version.svg
 [lfe]: https://github.com/rvirding/lfe
-[lfe badge]: https://img.shields.io/badge/lfe-1.2.0-blue.svg
-[erlang badge]: https://img.shields.io/badge/erlang-R15%20to%2019.1-blue.svg
+[lfe badge]: https://img.shields.io/badge/lfe-1.3.0-blue.svg
+[erlang badge]: https://img.shields.io/badge/erlang-17.5%20to%2022.0-blue.svg
 [versions]: https://github.com/lfe-rebar3/version/blob/master/.travis.yml
 [github tags]: https://github.com/lfe-rebar3/version/tags
 [github tags badge]: https://img.shields.io/github/tag/lfe-rebar3/version.svg
